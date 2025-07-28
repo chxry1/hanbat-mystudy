@@ -1,6 +1,5 @@
 public class App {
-    public static void main(String[] args) {
-        System.out.println("Hello my Hanb123123at-study");
-    }
-
+  public static void main(String[] args) {
+    System.out.println("Hello world 시작.");
+  }
 }
