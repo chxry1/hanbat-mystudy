@@ -1,0 +1,260 @@
+/* ===============================
+   기본 초기화 및 공통 설정
+   =============================== */
+* {
+  margin: 0;              /* 모든 요소의 바깥 여백 제거 */
+  padding: 0;             /* 모든 요소의 안쪽 여백 제거 */
+  box-sizing: border-box; /* width 계산 시 padding, border 포함되도록 설정 */
+}
+
+body, html {
+  font-family: 'Pretendard', sans-serif; /* 전체 폰트를 Pretendard로 설정, 없을 경우 sans-serif */
+  color: #fff;                           /* 기본 글자색은 흰색 */
+  height: 100%;                          /* 전체 높이 설정 */
+  scroll-behavior: smooth;               /* 스크롤을 부드럽게 이동하게 설정 */
+}
+
+
+/* ===============================
+   상단 네비게이션 바
+   =============================== */
+.navbar {
+  position: fixed;               /* 화면 상단에 고정 */
+  top: 0;                        /* 상단에서 0px 위치 */
+  width: 100%;                  /* 너비는 전체 화면 */
+  padding: 1rem 2rem;           /* 상하 1rem, 좌우 2rem의 패딩 */
+  background-color: white;      /* 배경색은 흰색 */
+  display: flex;                /* 내부 요소 가로 배치 */
+  justify-content: space-between; /* 좌우 끝으로 요소 정렬 */
+  align-items: center;          /* 세로 정렬은 가운데 */
+  z-index: 1000;                /* 다른 요소보다 위에 오도록 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 아래쪽 그림자 효과 */
+}
+
+.logo {
+  font-weight: 700;   /* 굵은 글씨 */
+  font-size: 1.2rem;  /* 글자 크기 1.2배 (약 19px) */
+  color: #333;        /* 짙은 회색 글자색 */
+}
+
+.menu-icon {
+  font-size: 1.5rem;  /* 아이콘 크기 (약 24px) */
+  color: #333;        /* 짙은 회색 */
+}
+
+
+/* ===============================
+   Hero 영역 (사진 + 텍스트)
+   =============================== */
+.hero {
+  position: relative;        /* 내부의 절대 위치 요소 기준 */
+  width: 100%;               /* 전체 너비 */
+  height: auto;              /* 높이는 내용에 맞게 자동 */
+}
+
+/* 배경 이미지 (사진) */
+.hero-img {
+  width: 100%;               /* 너비는 꽉 차게 */
+  height: auto;              /* 높이는 비율 유지 */
+  display: block;            /* 여백 제거를 위한 블록 처리 */
+}
+
+/* 이미지 위 텍스트 박스 */
+.text-box {
+  position: absolute;        /* .hero 기준으로 절대 위치 */
+  top: 0;                    /* 위에서 0px */
+  left: 0;                   /* 왼쪽에서 0px */
+  width: 100%;               /* 전체 너비 */
+  height: 100%;              /* 전체 높이 */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
+  display: flex;             /* 내부 요소 정렬을 위한 flex */
+  flex-direction: column;    /* 세로 방향으로 쌓음 */
+  justify-content: center;   /* 위아래 가운데 정렬 */
+  align-items: center;       /* 가로 가운데 정렬 */
+  text-align: center;        /* 텍스트 가운데 정렬 */
+  padding: 4rem 2rem;        /* 상하좌우 패딩 */
+}
+
+/* 큰 제목 텍스트 */
+.text-box h1 {
+  font-size: 3rem;           /* 제목 크기 */
+  font-weight: 900;          /* 매우 굵은 글씨 */
+  font-family: 'Jua', sans-serif; /* Google Fonts에서 불러온 'Jua' 사용 */
+  margin-bottom: 1.5rem;     /* 아래 여백 */
+}
+
+/* 소개 문단 텍스트 */
+.intro {
+  font-size: 1rem;           /* 기본 텍스트 크기 */
+  line-height: 1.6;          /* 줄 간격 */
+  margin-bottom: 2rem;       /* 아래 여백 */
+  color: #eee;               /* 밝은 회색 글자색 */
+}
+
+/* 버튼 스타일 */
+.hero-btn {
+  background-color: #ff5722; /* 주황색 배경 */
+  padding: 0.75rem 2rem;     /* 상하 0.75rem, 좌우 2rem */
+  border-radius: 30px;       /* 둥근 테두리 */
+  color: white;              /* 텍스트 색상 */
+  text-decoration: none;     /* 밑줄 제거 */
+  font-weight: bold;         /* 굵은 글씨 */
+  transition: background-color 0.3s ease; /* 마우스 호버 시 부드럽게 색상 전환 */
+}
+
+/* 버튼에 마우스 올렸을 때 */
+.hero-btn:hover {
+  background-color: #e64a19; /* 더 진한 주황색으로 변경 */
+}
+
+
+/* ===============================
+   About 섹션
+   =============================== */
+.about {
+  background-color: #fff;
+  color: #333;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.about hr {
+  width: 150px;
+  height: 1.5px;
+  background: #787272;
+  margin: 0 auto 2rem;
+  border: none;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.about-left,
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 3px;
+}
+
+.info-text strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* ===============================
+   SKILLS 섹션
+   =============================== */
+.skills {
+  background-color: #f2c94c;       /* 전체 배경 노란색 */
+  padding: 4rem 2rem;              /* 위아래 4rem, 좌우 2rem 내부 여백 */
+  color: #333;                     /* 텍스트 색상 */
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.skills hr {
+  width: 150px;
+  height: 2px;
+  background: #333;
+  border: none;
+  margin: 0 auto 2rem;
+}
+
+.skills-grid {
+  background-color: #fff;          /* 내부 박스 흰색 */
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill-category {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 140px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.skill-category i {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex: 1; /* ✅ 이게 핵심! */
+}
+
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+/* 색상 클래스들 */
+.skill-badge.blue { background-color: #4e7dd3; }
+.skill-badge.yellow { background-color: #f2c94c; color: #333; }
+.skill-badge.gray { background-color: #7f8c8d; }
+.skill-badge.black { background-color: #333; }
+.skill-badge.red { background-color: #e74c3c; }
+.skill-badge.navy { background-color: #34495e; }
+.skill-badge.pink { background-color: #e91e63; }
+.skill-badge.sky { background-color: #00bcd4; }
+.skill-badge.purple { background-color: #9b59b6; }
+.skill-badge.green { background-color: #27ae60; }
+.skill-badge.orange { background-color: #f39c12; }
+.skill-badge.teal { background-color: #1abc9c; }
+
+

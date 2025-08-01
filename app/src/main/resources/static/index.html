@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한상현 포트폴리오</title>
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts: Jua (Hero 제목용) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+
+    <!-- 아이콘 폰트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+<!-- 네비게이션 바 -->
+<header class="navbar">
+    <div class="logo">HSH's Portfolio</div>
+    <div class="menu-icon">☰</div>
+</header>
+
+<!-- Hero 섹션 -->
+<section class="hero">
+    <img src="images/background.jpg" alt="배경 이미지" class="hero-img" />
+    <div class="text-box">
+        <h1>- 한상현 -<br />백엔드 개발자 포트폴리오</h1>
+        <p class="intro">
+            안녕하세요.<br />
+            안정성과 구조에 집중하는 백엔드 개발자<br />
+            한상현입니다.
+        </p>
+        <a href="#about" class="hero-btn">더 알아보기 ↓</a>
+    </div>
+</section>
+
+<!-- About 섹션 -->
+<section class="about" id="about">
+    <h2><i class="fas fa-link"></i> ABOUT ME</h2>
+    <hr />
+    <div class="about-grid">
+
+        <!-- 왼쪽 열 -->
+        <div class="about-left">
+            <div class="info-item">
+                <i class="fas fa-user"></i>
+                <div class="info-text">
+                    <strong>이름</strong>
+                    <p>한상현</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-text">
+                    <strong>위치</strong>
+                    <p>서울특별시 강남구</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div class="info-text">
+                    <strong>이메일</strong>
+                    <p>xhtmrka1@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 오른쪽 열 -->
+        <div class="about-right">
+            <div class="info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="info-text">
+                    <strong>생년월일</strong>
+                    <p>03.09.29</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div class="info-text">
+                    <strong>연락처</strong>
+                    <p>010-1234-5678</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="info-text">
+                    <strong>학력</strong>
+                    <p>서울대학교<br />(컴퓨터공학부)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--SKILLS-->
+<section class="skills">
+    <h2><i class="fas fa-link"></i> SKILLS</h2>
+    <hr />
+    <div class="skills-grid">
+
+        <!-- Language -->
+        <div class="skill-row">
+            <div class="skill-category">
+                <i class="fas fa-desktop"></i>
+                <span>Languagge</span>
+            </div>
+            <div class="skill-items">
+                <span class="skill-badge blue">TypeScript</span>
+                <span class="skill-badge yellow">JavaScript</span>
+                <span class="skill-badge gray">Python</span>
+            </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-row">
+            <div class="skill-category">
+                <i class="fas fa-code"></i>
+                <span>Frontend</span>
+            </div>
+            <div class="skill-items">
+                <span class="skill-badge black">Next.js (React)</span>
+                <span class="skill-badge gray">Zustand</span>
+                <span class="skill-badge blue">Recoil</span>
+                <span class="skill-badge red">React-Query</span>
+                <span class="skill-badge navy">React-Hook-Form</span>
+                <span class="skill-badge pink">Sass</span>
+                <span class="skill-badge sky">Tailwind CSS</span>
+                <span class="skill-badge purple">Emotion</span>
+            </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-row">
+            <div class="skill-category">
+                <i class="fas fa-server"></i>
+                <span>Backend</span>
+            </div>
+            <div class="skill-items">
+                <span class="skill-badge green">Django</span>
+                <span class="skill-badge orange">Firebase</span>
+                <span class="skill-badge teal">Supabase</span>
+            </div>
+        </div>
+
+        <!-- DevOps -->
+        <div class="skill-row">
+            <div class="skill-category">
+                <i class="fas fa-cloud"></i>
+                <span>DevOps</span>
+            </div>
+            <div class="skill-items">
+                <span class="skill-badge orange">AWS</span>
+                <span class="skill-badge black">Vercel</span>
+                <span class="skill-badge blue">Docker</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+
+</html>
