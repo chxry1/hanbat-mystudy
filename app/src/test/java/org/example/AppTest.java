@@ -3,6 +3,7 @@
  */
 package org.example;
 
+import org.example.myapp.App;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
